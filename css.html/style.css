@@ -1,0 +1,16 @@
+button{
+    background: green;
+}
+#para1{
+    color: rgb(162, 41, 41);
+}
+#para2{
+    color: rgb(153, 77, 224);
+}
+.content{
+    color: aqua;
+}
+#div{
+    width: 300px;
+    height: 200px;
+}

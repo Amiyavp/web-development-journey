@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Home Page</title>
+
+    <!-- CSS CONNECTION -->
+    <link rel="stylesheet" href="yt.css">
+</head>
+
+<body>
+
+    <!-- TOP NAVBAR -->
+    <header class="navbar">
+
+        <div class="left">
+            <div class="menu">☰</div>
+
+            <div class="logo">
+                <span class="youtube-icon">▶</span> YouTube
+            </div>
+        </div>
+
+        <div class="search-area">
+            <input type="text" id="searchInput"
+            placeholder="Search">
+
+            <button onclick="searchVideos()">⌕</button>
+
+            <div class="mic">🎙</div>
+        </div>
+
+        <div class="right">
+            <div class="create">＋ Create</div>
+            <div class="notification">🔔</div>
+            <div class="profile">A</div>
+        </div>
+
+    </header>
+
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="side-item">
+            <span>⌂</span>
+            Home
+        </div>
+
+        <div class="side-item">
+            <span>▷</span>
+            Shorts
+        </div>
+
+        <div class="side-item">
+            <span>▣</span>
+            Subscriptions
+        </div>
+
+        <div class="side-item">
+            <span>◉</span>
+            You
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main">
+
+        <!-- CATEGORY BUTTONS -->
+        <div class="categories">
+
+            <button class="active"
+            onclick="filterCategory(this,'all')">All</button>
+
+            <button onclick="filterCategory(this,'music')">Music</button>
+
+            <button onclick="filterCategory(this,'mixes')">Mixes</button>
+
+            <button onclick="filterCategory(this,'malayalam')">
+                Uppum Mulakum
+            </button>
+
+            <button onclick="filterCategory(this,'malayalam')">
+                Malayalam cinema
+            </button>
+
+            <button onclick="filterCategory(this,'music')">
+                Indian pop music
+            </button>
+
+            <button onclick="filterCategory(this,'movies')">
+                Romantic comedies
+            </button>
+
+            <button onclick="filterCategory(this,'movies')">
+                Tamil Cinema
+            </button>
+
+            <button onclick="filterCategory(this,'music')">
+                Lo-fi
+            </button>
+
+            <button onclick="filterCategory(this,'movies')">
+                Web series
+            </button>
+
+            <button onclick="filterCategory(this,'music')">
+                Soul Music
+            </button>
+
+        </div>
+
+
+        <!-- VIDEO GRID -->
+        <section class="video-grid" id="videoGrid">
+
+
+            <!-- VIDEO 1 -->
+            <div class="video-card" data-category="music">
+
+                <img class="thumbnail"
+                src="https://images.unsplash.com/photo-1506157786151-b8491531f063?w=700"
+                alt="Music">
+
+                <div class="video-info">
+                    <div class="channel-icon">M</div>
+
+                    <div>
+                        <h3>Trending Malayalam Songs | Music Mix</h3>
+                        <p>Malayalam Music</p>
+                        <p>1.2M views · 2 weeks ago</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- VIDEO 2 -->
+            <div class="video-card" data-category="music">
+
+                <img class="thumbnail"
+                src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=700"
+                alt="Music concert">
+
+                <div class="video-info">
+                    <div class="channel-icon">S</div>
+
+                    <div>
+                        <h3>Magale - Sai Abhyankkar | Music Mix</h3>
+                        <p>Music World</p>
+                        <p>850K views · 1 month ago</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- VIDEO 3 -->
+            <div class="video-card" data-category="malayalam">
+                <img class="thumbnail"
+                src="https://images.unsplash.com/photo-1485846234645-a62644f84728?w=700"
+                alt="Cinema">
+
+                <div class="video-info">
+                    <div class="channel-icon">F</div>
+
+                    <div>
+                        <h3>Uppum Mulakum | Latest Episode</h3>
+                        <p>Flowers Entertainment</p>
+                        <p>1.4M views · 7 months ago</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- VIDEO 4 -->
+            <div class="video-card" data-category="movies">
+
+                <img class="thumbnail"
+                src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?w=700"
+                alt="Nature">
+
+                <div class="video-info">
+                    <div class="channel-icon">N</div>
+
+                    <div>
+                        <h3>Beautiful Memories | Malayalam Song</h3>
+                        <p>Music Kerala</p>
+                        <p>500K views · 3 days ago</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- VIDEO 5 -->
+            <div class="video-card" data-category="movies">
+
+                <img class="thumbnail"
+                src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=700"
+                alt="Performance">
+
+                <div class="video-info">
+                    <div class="channel-icon">K</div>
+
+                    <div>
+                        <h3>Camera Rolling Action | New Video</h3>
+                        <p>Kudos Media</p>
+                        <p>250K views · 1 week ago</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- VIDEO 6 -->
+            <div class="video-card" data-category="music">
+
+                <img class="thumbnail"
+                src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?w=700"
+                alt="Night sky">
+
+                <div class="video-info">
+                    <div class="channel-icon">R</div>
+
+                    <div>
+                        <h3>Rathinamo | Female Version</h3>
+                        <p>Romantic Music</p>
+                        <p>720K views · 5 days ago</p>
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+
+    </main>
+
+
+    <!-- JAVASCRIPT -->
+    <script>
+
+        function searchVideos() {
+
+            let input = document.getElementById("searchInput")
+            .value.toLowerCase();
+
+            let videos = document.querySelectorAll(".video-card");
+
+            videos.forEach(video => {
+
+                let title = video.querySelector("h3")
+                .innerText.toLowerCase();
+
+                let channel = video.querySelectorAll("p")[0]
+                .innerText.toLowerCase();
+
+                if (title.includes(input) ||
+                    channel.includes(input)) {
+
+                    video.style.display = "block";
+
+                } else {
+
+                    video.style.display = "none";
+
+                }
+
+            });
+
+        }
+
+
+        function filterCategory(button, category) {
+
+            let buttons = document.querySelectorAll(".categories button");
+
+            buttons.forEach(btn => {
+                btn.classList.remove("active");
+            });
+
+            button.classList.add("active");
+
+            let videos = document.querySelectorAll(".video-card");
+
+            videos.forEach(video => {
+
+                if (category === "all" ||
+                    video.dataset.category === category) {
+
+                    video.style.display = "block";
+
+                } else {
+
+                    video.style.display = "none";
+
+                }
+
+            });
+
+        }
+
+
+        document.getElementById("searchInput")
+        .addEventListener("keyup", function(event) {
+
+            if (event.key === "Enter") {
+                searchVideos();
+            }
+
+        });
+
+    </script>
+
+</body>
+</html>
